@@ -1,6 +1,18 @@
-package animals;
+package com.csci5448.zoo.animals;
 
-public abstract class Animal{
+import com.csci5448.zoo.utils.Namer;
+
+public abstract class Animal {
+    public Animal() {
+        String firstLetter = this.getClass().getSimpleName().substring(0,1);
+        this._name = Namer.getNewName(firstLetter);
+    }
+
+    public String getName() {
+        return _name;
+    }
+
+    private String _name;
     public boolean sleep(){
         // string format from https://dzone.com/articles/java-string-format-examples
         // get class name from https://stackoverflow.com/questions/6901764/get-concrete-class-name-from-abstract-class
