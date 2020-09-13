@@ -24,6 +24,8 @@ public class Namer {
         return map;
     }
     public static String getNewName(String letter){
+        // Had some trouble with static property initialization. Decided to init during name retrieval
+        // https://stackoverflow.com/questions/8704423/when-are-static-variables-initialized#:~:text=Static%20variables%20are%20initialized%20only,doesn't%20need%20any%20object.
         if(Namer._names.isEmpty()){
             Namer._names = _initNames();
         }

@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 public class Zoo {
     public static final ArrayList<Animal> animals = new ArrayList<Animal>();
-
     // init the zoo
     public static void initZoo(){
         animals.add(new Cat());

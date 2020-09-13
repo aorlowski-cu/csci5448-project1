@@ -20,4 +20,14 @@ public abstract class Animal {
         //TODO: is there a scenario where the animal doesn't sleep?
         return true;
     }
+
+    public void wake(){
+        System.out.println(String.format("%s the %s woke up.",this.getName(), this.getClass().getSimpleName()));
+    }
+    public void feed(){
+        System.out.println(String.format("%s the %s was fed.",this.getName(), this.getClass().getSimpleName()));
+    }
+    public void exercise(){
+        System.out.println(String.format("%s the %s roamed.",this.getName(), this.getClass().getSimpleName()));
+    }
 }
