@@ -17,7 +17,6 @@ public abstract class Animal {
         // string format from https://dzone.com/articles/java-string-format-examples
         // get class name from https://stackoverflow.com/questions/6901764/get-concrete-class-name-from-abstract-class
         System.out.println(String.format("%s the %s went to sleep", this._name, this.getClass().getSimpleName()));
-        //TODO: is there a scenario where the animal doesn't sleep?
         return true;
     }
 
