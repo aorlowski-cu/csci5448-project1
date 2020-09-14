@@ -4,4 +4,11 @@ public class Cat extends Feline {
     public Cat(){
         super();
     }
+
+    @Override
+    public void makeNoise() {
+        System.out.println(String.format("%s the %s meowed.",this.getName(), this.getClass().getSimpleName()));
+    }
+
+
 }

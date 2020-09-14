@@ -24,7 +24,7 @@ public class Zookeeper extends ZooEmployee {
 
     public void rollCallAnimals(){
         for (Animal animal : Zoo.animals) {
-            System.out.println(String.format("%s the %s is here.", animal.getName(), animal.getClass()));
+            System.out.println(String.format("%s the %s is here.", animal.getName(), animal.getClass().getSimpleName()));
         }
     }
 

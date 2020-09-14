@@ -8,10 +8,19 @@ public class ZooApp {
 
     public static void main(String[] args) {
         Zoo.initZoo();
-        for(Animal animal: Zoo.animals){
-            System.out.println(animal.getName());
-        }
+        //Polymorphism example:
+//        for(Animal animal: Zoo.animals){
+//            System.out.println(animal.getName());
+//
+//        }
         Zookeeper keeper = new Zookeeper();
         keeper.arrive();
+        keeper.wakeAnimals();
+        keeper.rollCallAnimals();
+        keeper.exerciseAnimals();
+        keeper.feedAnimals();
+        keeper.sleepAnimals();
+        keeper.depart();
+
     }
 }
