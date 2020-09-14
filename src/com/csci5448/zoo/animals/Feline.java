@@ -32,7 +32,7 @@ public class Feline extends Animal {
         if(decision < 3){
             exercise();
             return false;
-        } else if (decision >2 && decision < 6){
+        } else if (decision < 6){
             makeNoise();
             return false;
         } else {
