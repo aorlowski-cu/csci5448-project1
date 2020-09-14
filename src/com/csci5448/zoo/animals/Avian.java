@@ -1,7 +1,7 @@
 package com.csci5448.zoo.animals;
 
-public class Dog extends Canine{
-    public Dog(){
+public class Avian extends Animal{
+    public Avian(){
         super();
     }
 }
