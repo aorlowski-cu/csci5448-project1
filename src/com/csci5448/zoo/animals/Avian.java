@@ -5,6 +5,7 @@ public class Avian extends Animal{
         super();
     }
 
+    // override superclass Animal's wake method
     @Override
     public void wake() {
         System.out.println(String.format("%s the %s woke up and flew away.",this.getName(), this.getClass().getSimpleName()));

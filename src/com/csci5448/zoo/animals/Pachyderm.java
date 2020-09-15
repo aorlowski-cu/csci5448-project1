@@ -6,6 +6,7 @@ public class Pachyderm extends Animal{
 
     public Pachyderm(){ super();}
 
+    // Override superclass Animal's makeNoise method
     @Override
     public void exercise() {
 

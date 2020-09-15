@@ -5,6 +5,7 @@ public class Hawk extends Avian{
         super();
     }
 
+    // Override superclass Avian's makeNoise method
     @Override
     public void makeNoise() {
         System.out.println(String.format("%s the %s screeched.",this.getName(), this.getClass().getSimpleName()));

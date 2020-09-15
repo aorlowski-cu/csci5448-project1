@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Zoo {
     public static final ArrayList<Animal> animals = new ArrayList<>();
-    // init the zoo
+    // init the zoo to create all the animals
     public static void initZoo(){
         animals.add(new Cat());
         animals.add(new Panther());
@@ -20,10 +20,5 @@ public class Zoo {
         animals.add(new Tiger());
         animals.add(new Parrot());
         animals.add(new Rhino());
-
-        /*
-        Testing:
-         */
-
     }
 }

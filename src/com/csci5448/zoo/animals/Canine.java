@@ -7,6 +7,7 @@ public class Canine extends Animal{
         super();
     }
 
+    // Override superclass Animal's exercise method
     @Override
     public void exercise() {
 
@@ -19,6 +20,7 @@ public class Canine extends Animal{
         }
     }
 
+    // Override superclass Animal's sleep method
     @Override
     public boolean sleep() {
         super.sleep();

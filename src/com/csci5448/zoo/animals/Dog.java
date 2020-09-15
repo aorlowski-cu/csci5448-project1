@@ -5,6 +5,7 @@ public class Dog extends Canine{
         super();
     }
 
+    // Override superclass Canine's makeNoise method
     @Override
     public void makeNoise() {
         System.out.println(String.format("%s the %s barked.",this.getName(), this.getClass().getSimpleName()));
