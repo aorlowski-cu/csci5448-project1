@@ -1,5 +1,6 @@
 package com.csci5448.zoo;
 
+import com.csci5448.zoo.employees.ZooAnnouncer;
 import com.csci5448.zoo.employees.Zookeeper;
 
 import java.io.File;
@@ -19,6 +20,11 @@ public class ZooApp {
         Zoo.initZoo();
 
         Zookeeper keeper = new Zookeeper();
+        ZooAnnouncer announcer = new ZooAnnouncer();
+
+        //Zoo announcer watches the keeper
+        keeper.addPropertyChangeListener(announcer);
+
         ZooClock clock = new ZooClock();
 
         //Zoo keeper watches the clock
