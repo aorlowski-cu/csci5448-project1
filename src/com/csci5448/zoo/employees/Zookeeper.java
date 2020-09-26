@@ -8,7 +8,7 @@ import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.time.LocalTime;
 
-public class Zookeeper extends ZooEmployee implements PropertyChangeListener {
+public class Zookeeper extends ZooEmployee {
 
     private PropertyChangeSupport zooEmpObservable;
     private String toBeObserved;
@@ -26,16 +26,15 @@ public class Zookeeper extends ZooEmployee implements PropertyChangeListener {
 
     //This method is part of the Observer pattern, allows the ZooKeeper to show the Announcer what it is going to do
     public void setJob(String value) {
-        zooEmpObservable.firePropertyChange("news", this.toBeObserved, value);
+        zooEmpObservable.firePropertyChange("keeperactivity", this.toBeObserved, value);
         this.toBeObserved = value;
     }
 
-    public void propertyChange(PropertyChangeEvent e){
-        this._maybeDoZooTask((LocalTime)e.getNewValue());
-    }
-
-    private void _maybeDoZooTask(LocalTime time){
-        switch(time.getHour()) {
+    public void maybeDoScheduledActivity(int hour){
+        switch(hour) {
+            case 9:
+                arrive();
+                break;
             case 10:
                 wakeAnimals();
                 rollCallAnimals();
@@ -49,10 +48,12 @@ public class Zookeeper extends ZooEmployee implements PropertyChangeListener {
             case 20:
                 sleepAnimals();
                 break;
+            case 21:
+                depart();
+                break;
             default:
                 break;
         }
-
     }
 
     public void wakeAnimals() {
