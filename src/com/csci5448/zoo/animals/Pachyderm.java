@@ -1,10 +1,16 @@
 package com.csci5448.zoo.animals;
 
+import com.csci5448.zoo.behaviors.NormalExercise;
+import com.csci5448.zoo.behaviors.PachydermExercise;
+
 import java.util.Random;
 
 public class Pachyderm extends Animal{
 
-    public Pachyderm(){ super();}
+    public Pachyderm(){
+        super();
+        exerciseBehavior = new PachydermExercise();
+    }
 
     // Override superclass Animal's makeNoise method
     @Override

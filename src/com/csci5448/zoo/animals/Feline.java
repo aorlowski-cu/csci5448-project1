@@ -1,8 +1,12 @@
 package com.csci5448.zoo.animals;
+import com.csci5448.zoo.behaviors.FelineExercise;
+import com.csci5448.zoo.behaviors.NormalExercise;
+
 import java.util.Random;
 public class Feline extends Animal {
     public Feline(){
         super();
+        exerciseBehavior = new FelineExercise();
     }
 
     // Override superclass Animal's wake method
@@ -16,12 +20,12 @@ public class Feline extends Animal {
     public void feed() {
         super.feed();
     }
-
-    // Override superclass Animal's exercise method
-    @Override
-    public void exercise() {
-        System.out.println(String.format("%s the %s prowled.",this.getName(), this.getClass().getSimpleName()));
-    }
+//
+//    // Override superclass Animal's exercise method
+//    @Override
+//    public void exercise() {
+//        System.out.println(String.format("%s the %s prowled.",this.getName(), this.getClass().getSimpleName()));
+//    }
 
     // Override superclass Animal's makeNoise method
     @Override

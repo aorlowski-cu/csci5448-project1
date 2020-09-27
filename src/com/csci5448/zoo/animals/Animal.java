@@ -1,8 +1,11 @@
 package com.csci5448.zoo.animals;
 
+import com.csci5448.zoo.behaviors.ExerciseBehavior;
 import com.csci5448.zoo.utils.Namer;
 
 public abstract class Animal { //Abstract class example,
+    // Strategy Pattern. Delegate Animal exercise behavior
+    ExerciseBehavior exerciseBehavior;
     public Animal() {
         String firstLetter = this.getClass().getSimpleName().substring(0,1);
         //Identity example, giving each object a unique name
@@ -28,7 +31,8 @@ public abstract class Animal { //Abstract class example,
         System.out.println(String.format("%s the %s was fed.",this.getName(), this.getClass().getSimpleName()));
     }
     public void exercise(){
-        System.out.println(String.format("%s the %s roamed.",this.getName(), this.getClass().getSimpleName()));
+        exerciseBehavior.exercise(this.getName(), this.getClass().getSimpleName());
+//        System.out.println(String.format("%s the %s roamed.",this.getName(), this.getClass().getSimpleName()));
     }
 
     //To be overwritten pretty much everywhere
