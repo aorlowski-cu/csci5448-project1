@@ -50,7 +50,7 @@ public class ZooAnnouncer extends ZooEmployee implements PropertyChangeListener 
             case "Exercise":
                 _makeAnnouncement("The Zookeeper is about to make the animals exercise!");
                 break;
-            case "Eat":
+            case "Feed":
                 _makeAnnouncement("The Zookeeper is about to feed the animals!");
                 break;
             default:

@@ -8,7 +8,7 @@ public class ZooFoodServer extends ZooEmployee {
     private PropertyChangeSupport zooServerObservable;
     private String _job;
 
-    //Adding an observable to each ZooKeeper, this code and next three methods from:
+    //Adding an observable to each ZooFoodServer, this code and next three methods from:
     // https://www.baeldung.com/java-observer-pattern
     public ZooFoodServer(){
         super();
